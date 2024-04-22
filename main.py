@@ -15,3 +15,8 @@ def hello():
 @app.get("/time")
 def time():
     return {"time": str(datetime.now())}
+
+
+@app.get("/file")
+def file():
+    return FileResponse("main.py")
